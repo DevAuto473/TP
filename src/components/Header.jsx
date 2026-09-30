@@ -82,7 +82,7 @@ export default function Header({ currentPage = 'home', onNavigateHome, onNavigat
         <div className="container header-inner">
           <a href="#top" className="brand" onClick={handleBrandClick}>
             <span className="brand-mark" aria-hidden="true">
-              <img src="/logo.png" alt="شعار ترجمان" className="brand-img" />
+              <img src={`${import.meta.env.BASE_URL}logo.png`} alt="شعار ترجمان" className="brand-img" />
             </span>
             <span className="brand-text">
               <span className="brand-name">{site.name}</span>
