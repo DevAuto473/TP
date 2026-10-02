@@ -107,9 +107,8 @@ const ContactDialog = forwardRef(function ContactDialog(_, ref) {
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
               ) : (
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
-                  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+                <svg className="humbleicons hi-duplicate" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 15.5H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h9.5a1 1 0 0 1 1 1v1m-6 14H19a1 1 0 0 0 1-1V9.5a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1V19a1 1 0 0 0 1 1Z"/>
                 </svg>
               )}
             </span>
@@ -173,8 +172,22 @@ const ContactDialog = forwardRef(function ContactDialog(_, ref) {
             />
           </div>
 
-          <button type="submit" className="contact-submit-btn" disabled={loading}>
-            {loading ? 'جاري الإرسال...' : 'إرسال الرسالة'}
+          <button type="submit" className="uiverse contact-submit-btn" disabled={loading}>
+            <div className="wrapper">
+              <span>{loading ? 'جاري الإرسال...' : 'إرسال الرسالة'}</span>
+              <div className="circle circle-12" />
+              <div className="circle circle-11" />
+              <div className="circle circle-10" />
+              <div className="circle circle-9" />
+              <div className="circle circle-8" />
+              <div className="circle circle-7" />
+              <div className="circle circle-6" />
+              <div className="circle circle-5" />
+              <div className="circle circle-4" />
+              <div className="circle circle-3" />
+              <div className="circle circle-2" />
+              <div className="circle circle-1" />
+            </div>
           </button>
           
           {status === 'success' && (
